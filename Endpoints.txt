@@ -1,0 +1,96 @@
+// REGISTER
+POST http://localhost:1111/api/authentication/register
+Host: localhost:1111
+Content-Type: application/json
+Content-Length: 83
+{
+     "username":"kullanıcı adı",
+     "name":"root",
+     "password":"root"
+}
+
+
+// LOGIN
+POST http://localhost:1111/api/authentication/login
+Host: localhost:1111
+Content-Type: application/json
+Content-Length: 53
+
+{
+     "username":"kullanıcı adı",
+     "password":"root"
+}
+
+///////////////////////////////////////
+Daily
+
+//CREATE
+http://localhost:1111/gateway/daily
+POST /gateway/daily HTTP/1.1
+Host: localhost:1111
+Authorization: Bearer
+Content-Type: application/json
+{
+    "dailyHeader":"header1",
+    "dailyContent":"içerik1"
+}
+
+//LIST
+GET http://localhost:1111/gateway/daily
+Host: localhost:1111
+Authorization: Bearer
+
+
+//FIND
+GET http://localhost:1111/gateway/daily/2
+Host: localhost:1111
+Authorization: Bearer
+
+//UPDATE
+PUT http://localhost:1111/gateway/daily/2
+Host: localhost:1111
+Authorization: Bearer
+{
+    "dailyHeader":"header1111",
+    "dailyContent":"içerik1111"
+}
+
+//DELETE
+DELETE http://localhost:1111/gateway/daily/2
+Host: localhost:1111
+Authorization: Bearer
+
+///////////////////////////////////////
+Blog
+
+//CREATE
+POST http://localhost:1111/gateway/blog
+Host: localhost:1111
+Authorization: Bearer
+Content-Type: application/json
+{
+    "blogHeader":"header8",
+    "blogContent":"içerik8",
+    "blogImage":"url8"
+}
+
+//LIST
+GET http://localhost:1111/gateway/blog
+Host: localhost:1111
+Authorization: Bearer
+
+
+//FIND
+GET http://localhost:1111/gateway/blog/2
+Host: localhost:1111
+Authorization: Bearer
+
+//UPDATE
+PUT http://localhost:1111/gateway/blog/2
+Host: localhost:1111
+Authorization: Bearer
+
+//DELETE
+DELETE http://localhost:1111/gateway/blog/2
+Host: localhost:1111
+Authorization: Bearer
